@@ -1,5 +1,6 @@
 # Calculator
 
-__Link:__ 
+__Link:__ https://alex-m-2013.github.io/Calculator/
 
-A simple web calaculator made in HTML, CSS, and Javascript.
+A simple web calculator made in HTML, CSS, and Javascript.
+The code could be more optimised but its just for fun 🤷‍♂️ 
