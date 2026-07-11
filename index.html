@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculator</h1>
+    
+    <div class="calculator-card">
+        <p id="output">Output goes here...</p>
+
+        <div class="button-grid">
+            <button id="one" onclick="user_input += '1'">1</button>
+            <button id="two" onclick="user_input += '2'">2</button>
+            <button id="three" onclick="user_input += '3'">3</button>
+            <button id="add" onclick="user_input += '+'">+</button>
+
+            <button id="four" onclick="user_input += '4'">4</button>
+            <button id="five" onclick="user_input += '5'">5</button>
+            <button id="six" onclick="user_input += '6'">6</button>
+            <button id="minus" onclick="user_input += '-'">-</button>
+
+            <button id="seven" onclick="user_input += '7'">7</button>
+            <button id="eight" onclick="user_input += '8'">8</button>
+            <button id="nine" onclick="user_input += '9'">9</button>
+            <button id="multiply" onclick="user_input += '*'">x</button>
+
+            <button id="calculate" onclick="calculate()">Calculate</button>
+            <button id="divide" onclick="user_input += '/'">÷</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
