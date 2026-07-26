@@ -20,8 +20,8 @@ function updateDisplay() {
 }
 
 function clearDisplay() {
-    userInput = ""
-    updateDisplay()
+    userInput = "";
+    updateDisplay();
 }
 
 function calculate() {
@@ -33,8 +33,8 @@ function calculate() {
             userInput = "";
             output.textContent = result;
         } catch (error) {
-            clearDisplay()
-            console.log("Could not evaluate statement.")
+            clearDisplay();
+            console.log("Could not evaluate statement.");
         }
     }
 }
