@@ -1,38 +1,30 @@
-const output = document.getElementById("output")
+const output = document.getElementById("output");
 
-let user_input = ""
+let userInput = "";
 
-function update() {
-    if (user_input.trim() === "") {
-        output.style.color = "rgba(0, 0, 0, 0.4)"
-        output.style.fontStyle = "italic"
-        output.style.fontFamily = "sans-serif"
-        return
+function updateDisplay() {
+    const userInputArray = userInput.trim().split("");
+    let userInputDisplay = userInputArray;
+
+    for (let i = 0; i < userInputArray.length; i++) {
+        if (userInputArray[i] === "*") {
+            userInputDisplay[i] = "x";
+        }
+
+        if (userInputArray[i] === "/") {
+            userInputDisplay[i] = "÷";
+        }
     }
-    else {
-        output.style.color = "rgba(0, 0, 0, 1)"
-        output.style.fontStyle = "normal"
-        output.style.fontFamily = "Trebuchet MS"
-        output.innerHTML = user_input
-    }
+
+    output.textContent = userInputDisplay.join("");
 }
-
-let update_interval = setInterval(update, 10)
 
 function calculate() {
-    let result = eval(user_input.trim())
-    clearInterval(update_interval)
-    user_input = ""
-    output.innerHTML = result
-}
-
-function check_input_change() {
-    if (user_input === "") {
-        return
-    }
-    else {
-        update_interval = setInterval(update, 10)
+    if (userInput.trim() === "") {
+        return;
+    } else {
+        const result = eval(userInput.trim());
+        userInput = "";
+        output.textContent = result;
     }
 }
-
-setInterval(check_input_change, 10)
