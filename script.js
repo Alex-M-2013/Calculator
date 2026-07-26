@@ -16,7 +16,7 @@ function updateDisplay() {
         }
     }
 
-    output.textContent = userInputDisplay.join("");
+    output.textContent = userInputDisplay.join(" ");
 }
 
 function calculate() {
