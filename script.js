@@ -19,12 +19,22 @@ function updateDisplay() {
     output.textContent = userInputDisplay.join(" ");
 }
 
+function clearDisplay() {
+    userInput = ""
+    updateDisplay()
+}
+
 function calculate() {
     if (userInput.trim() === "") {
         return;
     } else {
-        const result = eval(userInput.trim());
-        userInput = "";
-        output.textContent = result;
+        try {
+            const result = eval(userInput.trim());
+            userInput = "";
+            output.textContent = result;
+        } catch (error) {
+            clearDisplay()
+            console.log("Could not evaluate statement.")
+        }
     }
 }
