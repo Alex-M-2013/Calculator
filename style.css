@@ -4,7 +4,7 @@ body {
     font-family: "Inter";
     background-color: #f0f0f0;
     margin: 0;
-    min-height: 100vh;
+    min-height: 100dvh;
 
     display: flex;
     flex-direction: column;
@@ -13,15 +13,16 @@ body {
 }
 
 h1 {
-    margin-bottom: 20px;
     text-decoration: underline;
 }
 
 .calculator-card {
-    width: 320px;
+    width: 90%;
+    max-width: 320px;
+    height: auto;
     background: white;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 1.2rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -32,9 +33,10 @@ h1 {
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     padding: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    height: 40px;
+    margin-bottom: 1.3rem;
+    margin-top: 0;
+    height: 2.3rem;
+    width: auto;
 }
 
 .button-grid {
@@ -49,7 +51,7 @@ button {
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 15px 0;
+    padding: 15px;
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
@@ -60,12 +62,16 @@ button:hover {
 }
 
 #calculate {
-    grid-column: span 3 / span 3;
+    grid-column: span 2 / span 2;
     background-color: rgb(40, 167, 69);
 }
 
 #calculate:hover {
     background-color: rgb(33, 136, 56);
+}
+
+#zero {
+    grid-column-start: 3;
 }
 
 #divide {
@@ -81,4 +87,32 @@ button:hover {
 
 #clear:hover {
     background-color: rgb(233, 20, 20);
+}
+
+#github-link {
+    height: 75px;
+    width: auto;
+    
+    margin: 10px;
+    
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    border-radius: 10px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#github-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+#github-link img {
+    height: 75px;
+    width: auto;
 }
