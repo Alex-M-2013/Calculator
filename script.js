@@ -34,7 +34,7 @@ function calculate() {
             output.textContent = result;
         } catch (error) {
             clearDisplay();
-            console.log("Could not evaluate statement.");
+            console.error(`Could not evaluate statement: ${error}`);
         }
     }
 }
