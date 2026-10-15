@@ -4,7 +4,7 @@ let userInput = "";
 
 function updateDisplay() {
     const userInputArray = userInput.trim().split("");
-    let userInputDisplay = userInputArray.slice();
+    let userInputDisplay = [...userInputArray];
 
     for (let i = 0; i < userInputArray.length; i++) {
         if (userInputArray[i] === "*") {
